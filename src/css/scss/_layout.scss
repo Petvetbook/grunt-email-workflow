@@ -5,14 +5,14 @@
 body{
   background-color: $grey;
 }
-
 .body {
   background-color: $grey;
   width: 100%;
 }
 
 /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
-.container {
+.container,
+.header {
   display: block;
   Margin: 0 auto !important; /* makes it centered */
   max-width: $width;
