@@ -42,6 +42,9 @@ ol {
     margin-left: 5px;
   }
 }
+p:last-child {
+  margin-bottom: 0;
+}
 
 a {
   color: black;

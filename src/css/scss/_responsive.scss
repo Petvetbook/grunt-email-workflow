@@ -27,21 +27,32 @@ table[class=body]{
         max-height: 35px !important;
       }
     }
+    .header-mc {
+      .mail-logo img {
+        max-height: 35px !important;
+      }
+    }
 
     .main {
       .wrapper {
+        padding: $padding/2 !important;
         border-bottom: $padding/2 solid $grey !important;
       }
-      img {
+      .wrapper-mc {
+        padding: 0 $padding/2 $padding/2 $padding/2 !important;
+        &.hello {
+          padding: $padding/2 !important;
+        }
+      }
+      .divider {
+        padding-bottom: $padding/2 !important;
+      }
+      .column-image img {
         max-width: 120px !important;
       }
       .box {
         padding-left: $padding/2 !important;
       }
-    }
-
-    .wrapper {
-      padding: $padding/2 !important;
     }
 
     // Buttons

@@ -1,26 +1,25 @@
 ---
 layout: default.hbs
-subject: Newsletter
+subject: Mailchimp Template
 ---
 <span class="preheader">This is preheader text. Some clients will show this text as a preview.</span>
 
-<table class="header">
+<table class="header-mc">
   <tr>
-    <td class="align-left logo">
-      <a href="http://www.morrr.com"><img src="../src/img/morrr-logo.png" alt="morrr.com"></a>
+    <td class="align-center mail-logo">
+      <a href="http://www.morrr.com"><img src="../src/img/mail-logo.png" alt="morrr.com"></a>
     </td>
-    <td class="align-center divider">
-      <img src="../src/img/divider.png" alt="|">
-    </td>
-    <td class="align-right mailer-logo">
-      <img src="../src/img/mailer-logo.png" alt="Weekly pet-talk">
+  </tr>
+  <tr>
+    <td class="align-center hero">
+      <img src="../src/img/img-header.jpg" alt="morrr.com">
     </td>
   </tr>
 </table>
 
-<table class="hello">
+<table class="main">
   <tr>
-    <td class="wrapper">
+    <td class="wrapper-mc hello">
       <table>
         <tr>
           <td>
@@ -31,45 +30,98 @@ subject: Newsletter
       </table>
     </td>
   </tr>
-</table>
 
-<table class="main">
   <tr>
-    <td class="wrapper">
+    <td class="wrapper-mc column">
       <table>
+        <tr>
+          <td class="divider">
+            <hr>
+          </td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <td class="column-image">
+            <img src="../src/img/img.png" />
+          </td>
+          <td class="box">
+            <h2>Simple responsive HTML email template</h2>
+            <p>This is a really simple email template. It's sole purpose is to get you to click the button below.</p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <tr>
+    <td class="wrapper-mc full">
+      <table>
+        <tr>
+          <td class="divider">
+            <hr>
+          </td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <td class="full-image">
+            <img src="../src/img/img-header.jpg" />
+          </td>
+        </tr>
         <tr>
           <td>
             <h2>Simple responsive HTML email template</h2>
             <p>This is a really simple email template. It's sole purpose is to get you to click the button below.</p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 
-
-            <table class="btn btn-primary">
-              <tr>
-                <td align="center">
-                  <table>
-                    <tr>
-                      <td>
-                        <a href="http://www.leemunroe.com">Call to action</a>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-
+  <tr>
+    <td class="wrapper-mc c2a">
+      <table>
+        <tr>
+          <td class="divider">
+            <hr>
+          </td>
+        </tr>
+      </table>
+      <table class=" btn btn-primary">
+        <tr>
+          <td align="center">
+            <a href="http://www.leemunroe.com">Call to action</a>
           </td>
         </tr>
       </table>
     </td>
   </tr>
 </table>
-<div class="footer">
-  <table>
-    <tr>
-      <td class="align-center">
-        <p>Don't like these annoying emails? <a href="{{ default.unsubscribe_url }}"><unsubscribe>Unsubscribe</unsubscribe></a>.</p>
-      </td>
-    </tr>
-  </table>
-</div>
 
+<table class="footer">
+  <tr>
+    <td class="wrapper">
+      <table>
+        <tr>
+          <td class="align-left logo">
+            <a href="http://www.morrr.com">
+              <img src="../src/img/footer-logo.png" alt="morrr.com"><br/>
+              <span>Bulevardi 7, Helsinki 00100</span>
+            </a>
+          </td>
+          <td class="align-right social">
+            <a href="https://www.facebook.com/morrrpets/"><img src="../src/img/fb.png" alt="morrr.com Facebook"></a>
+            <a href="https://twitter.com/@morrrpets"><img src="../src/img/tw.png" alt="morrr.com Twitter"></a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td class="wrapper align-left">
+      <p>Don't like these emails? <a href="{{ default.unsubscribe_url }}"><unsubscribe>Unsubscribe</unsubscribe></a>.</p>
+      <p>We are startup company offering digital pet services for animal wellbeing. Our aim is to become the leading marketplace for connecting pet owners with service providers. We cooperate with vets, groomers, trainers and other professionals to help pet owners easily find the best services. Our services are free to use for both customers and companies. We also provide professional tools for advancing sales and marketing with flexibly-priced premium tools. Please contact us to learn more. </p>
+    </td>
+  </tr>
+</table>

@@ -40,23 +40,55 @@ body{
   width: 100%;
 }
 
-.wrapper {
-  padding: $padding;
-}
-
 .main {
-  .wrapper {
-    border-bottom: $padding solid $grey;
+  .divider {
+    padding-bottom: $padding;
+    hr {
+      border: 1px solid #eee;
+      margin: 0;
+    }
   }
-  .image {
+  .full-image {
+    line-height: 0;
+    img {
+      line-height: 0;
+      max-width: 100%;
+      width: 100%;
+      margin-bottom: $line-height;
+    }
+  }
+  .column-image {
     line-height: 0;
     max-width: 50%;
-  }
-  img {
-    max-width: 300px;
+    img {
+      max-width: 300px;
+    }
   }
   .box {
     padding-left: $padding;
+  }
+}
+.wrapper {
+  padding: $padding;
+  border-bottom: $padding solid $grey;
+  img {
+    max-width: 300px;
+  }
+}
+.wrapper-mc {
+  padding: 0 $padding $padding $padding;
+
+  &.hello {
+    padding: $padding;
+  }
+
+  .btn {
+    td {
+      padding-bottom: 0;
+    }
+    a {
+      width: 100%;
+    }
   }
 }
 
@@ -93,9 +125,26 @@ body{
   .mailer-logo {
     width: 65%;
   }
-  img {
+  .logo img,
+  .divider img,
+  .mailer-logo img {
     max-height: 70px;
     width: auto;
+  }
+}
+.header-mc {
+  .mail-logo {
+    padding: 40px;
+  }
+  .mail-logo img {
+    max-height: 60px;
+  }
+  .hero {
+    line-height: 0;
+  }
+  .hero img {
+    width: 100%;
+    height: auto;
   }
 }
 
