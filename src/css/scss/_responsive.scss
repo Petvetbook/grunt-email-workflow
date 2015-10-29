@@ -6,34 +6,42 @@ table[class=body]{
   @media only screen and (max-width: $width+40) {
 
     // Type
-    h1,
-    h2,
-    h3,
-    h4 {
-      font-weight: 600 !important;
-    }
-
     h1 {
-      font-size: 22px !important;
+      font-size: 20px !important;
     }
-
-    h2 {
-      font-size: 18px !important;
-    }
-
-    h3 {
-      font-size: 16px !important;
+    p,
+    ul,
+    ol {
+      font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-size: 14px;
     }
 
     // Spacing
-    .content,
-    .wrapper {
-      padding: 10px !important;
-    }
-
     .container {
       padding: 0 !important;
       width: 100% !important;
+    }
+
+    .header {
+      img {
+        max-height: 35px !important;
+      }
+    }
+
+    .main {
+      .wrapper {
+        border-bottom: $padding/2 solid $grey !important;
+      }
+      img {
+        max-width: 120px !important;
+      }
+      .box {
+        padding-left: $padding/2 !important;
+      }
+    }
+
+    .wrapper {
+      padding: $padding/2 !important;
     }
 
     // Buttons

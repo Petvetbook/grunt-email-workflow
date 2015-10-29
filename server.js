@@ -35,7 +35,7 @@ function getTemplates() {
     templateFiles.forEach( function (file) {
         if (file.substr(-5) === '.html') {
           var contents = fs.readFileSync(templateDir + file, 'utf8');
-          
+
           if (contents) {
             $ = cheerio.load(contents);
 

@@ -17,9 +17,9 @@ img {
 body {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-size: 14px;
+  font-size: 15px;
   height: 100% !important;
-  line-height: 1.6em;
+  line-height: 24px;
   margin: 0;
   padding: 0;
   -ms-text-size-adjust: 100%;
@@ -28,6 +28,7 @@ body {
 
 table {
   border-collapse: separate !important;
+  border-spacing: 0;
   mso-table-lspace: 0pt;
   mso-table-rspace: 0pt;
   width: 100%; }
@@ -58,51 +59,90 @@ body {
   width: 100%; }
 
 /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
-.container,
-.header {
+.container {
   display: block;
-  Margin: 0 auto !important;
+  margin: 0 auto !important;
   /* makes it centered */
-  max-width: 580px;
+  max-width: 640px;
   padding: 10px;
   width: auto !important;
-  width: 580px; }
+  width: 640px; }
 
 /* This should also be a block element, so that it will fill 100% of the .container */
 .content {
   display: block;
   margin: 0 auto;
-  max-width: 580px;
+  max-width: 640px;
   padding: 10px; }
 
 /* -------------------------------------
     HEADER, FOOTER, MAIN
 ------------------------------------- */
-.main {
-  background: #ffffff;
-  border: 1px solid #c7c7c7;
+.main,
+.header {
+  background: white;
   border-radius: 0;
   width: 100%; }
 
 .wrapper {
-  padding: 30px; }
+  padding: 20px; }
+
+.main .wrapper {
+  border-bottom: 20px solid #d4d4d4; }
+
+.main .image {
+  line-height: 0;
+  max-width: 50%; }
+
+.main img {
+  max-width: 300px; }
+
+.main .box {
+  padding-left: 20px; }
+
+.goodbye .wrapper {
+  border-bottom: 1px solid #bbb; }
 
 .content-block {
-  padding: 0 0 30px; }
+  padding: 0 0 20px; }
 
 .header {
-  margin-bottom: 30px;
-  margin-top: 20px;
-  width: 100%; }
+  line-height: 0; }
+  .header a {
+    text-decoration: none;
+    line-height: 0;
+    color: black;
+    display: block; }
+  .header td {
+    padding: 0;
+    background: white; }
+  .header .logo {
+    width: 30%; }
+  .header .divider {
+    width: 5%;
+    vertical-align: bottom; }
+  .header .mailer-logo {
+    width: 65%; }
+  .header img {
+    max-height: 70px;
+    width: auto; }
 
 .footer {
   clear: both;
   width: 100%; }
   .footer * {
     color: #999999;
-    font-size: 12px; }
-  .footer td {
-    padding: 20px 0; }
+    font-size: 12px;
+    line-height: 16px; }
+  .footer .logo {
+    width: 40%; }
+    .footer .logo img {
+      height: 14px; }
+  .footer .social {
+    line-height: 0; }
+    .footer .social img {
+      height: 28px;
+      margin-left: 10px; }
 
 /* -------------------------------------
     TYPOGRAPHY
@@ -114,33 +154,32 @@ h4 {
   color: black !important;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 400;
-  line-height: 1.4em;
+  line-height: 20px;
   margin: 0;
-  margin-bottom: 30px; }
+  margin-bottom: 24px; }
 
 h1 {
-  font-size: 38px;
+  font-size: 24px;
   text-transform: capitalize;
+  font-weight: normal;
   font-weight: 300; }
 
-h2 {
-  font-size: 24px; }
-
-h3 {
-  font-size: 18px; }
-
+h2,
+h3,
 h4 {
-  font-size: 14px;
-  font-weight: 500; }
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase; }
 
 p,
 ul,
 ol {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: normal;
   margin: 0;
-  margin-bottom: 15px; }
+  margin-bottom: 12px; }
   p li,
   ul li,
   ol li {
@@ -148,8 +187,8 @@ ol {
     margin-left: 5px; }
 
 a {
-  color: #0064ff;
-  text-decoration: underline; }
+  color: black;
+  text-decoration: none; }
 
 /* -------------------------------------
     BUTTONS
@@ -176,7 +215,8 @@ a {
     margin: 0;
     padding: 12px 25px;
     text-decoration: none;
-    text-transform: capitalize; }
+    text-transform: uppercase;
+    letter-spacing: 0.05em; }
 
 .btn-primary table td {
   background-color: #0064ff; }
@@ -236,23 +276,26 @@ a {
 /* -------------------------------------
     RESPONSIVE AND MOBILE FRIENDLY STYLES
 ------------------------------------- */
-@media only screen and (max-width: 620px) {
-  table[class=body] h1,
-  table[class=body] h2,
-  table[class=body] h3,
-  table[class=body] h4 {
-    font-weight: 600 !important; }
+@media only screen and (max-width: 680px) {
   table[class=body] h1 {
-    font-size: 22px !important; }
-  table[class=body] h2 {
-    font-size: 18px !important; }
-  table[class=body] h3 {
-    font-size: 16px !important; }
-  table[class=body] .content,
-  table[class=body] .wrapper {
-    padding: 10px !important; }
+    font-size: 20px !important; }
+  table[class=body] p,
+  table[class=body] ul,
+  table[class=body] ol {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 14px; }
   table[class=body] .container {
     padding: 0 !important;
     width: 100% !important; }
+  table[class=body] .header img {
+    max-height: 35px !important; }
+  table[class=body] .main .wrapper {
+    border-bottom: 10px solid #d4d4d4 !important; }
+  table[class=body] .main img {
+    max-width: 120px !important; }
+  table[class=body] .main .box {
+    padding-left: 10px !important; }
+  table[class=body] .wrapper {
+    padding: 10px !important; }
   table[class=body] .btn table {
     width: 100% !important; } }

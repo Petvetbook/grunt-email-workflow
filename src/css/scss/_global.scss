@@ -17,9 +17,9 @@ img {
 body {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-size: 14px;
+  font-size: 15px;
   height: 100% !important;
-  line-height: 1.6em;
+  line-height: $line-height;
   margin: 0;
   padding: 0;
   -ms-text-size-adjust: 100%;
@@ -30,6 +30,7 @@ body {
 // Let's make sure all tables have defaults
 table {
   border-collapse: separate !important;
+  border-spacing: 0;
   mso-table-lspace: 0pt;
   mso-table-rspace: 0pt;
   width: 100%;
