@@ -344,5 +344,7 @@ a {
     max-width: 120px !important; }
   table[class=body] .main .box {
     padding-left: 10px !important; }
+  table[class=body] .mail-logo {
+    padding: 10px !important; }
   table[class=body] .btn table {
     width: 100% !important; } }
