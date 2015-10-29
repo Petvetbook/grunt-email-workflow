@@ -71,9 +71,6 @@ body{
 .wrapper {
   padding: $padding;
   border-bottom: $padding solid $grey;
-  img {
-    max-width: 300px;
-  }
 }
 .wrapper-mc {
   padding: 0 $padding $padding $padding;
@@ -167,6 +164,7 @@ body{
     line-height: 0;
     img {
       height: 28px;
+      width: 28px;
       margin-left: 10px;
     }
   }
