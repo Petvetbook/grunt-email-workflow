@@ -45,8 +45,10 @@ ol {
 p:last-child {
   margin-bottom: 0;
 }
-
 a {
   color: black;
   text-decoration: none;
+}
+p > a {
+  border-bottom: 1px solid $grey;
 }

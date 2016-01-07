@@ -98,6 +98,12 @@ body {
     width: 100%;
     margin-bottom: 24px; }
 
+.main .image {
+  line-height: 0;
+  max-width: 30%; }
+  .main .image img {
+    max-width: 100%; }
+
 .main .column-image {
   line-height: 0;
   max-width: 50%; }
@@ -169,10 +175,10 @@ body {
     color: #999999;
     font-size: 12px;
     line-height: 16px; }
-  .footer .logo {
-    width: 40%; }
-    .footer .logo img {
-      height: 14px; }
+  .footer .logo img,
+  .footer .footer-logo img {
+    height: 14px !important;
+    width: auto; }
   .footer .social {
     line-height: 0; }
     .footer .social img {
@@ -228,6 +234,9 @@ p:last-child {
 a {
   color: black;
   text-decoration: none; }
+
+p > a {
+  border-bottom: 1px solid #d4d4d4; }
 
 /* -------------------------------------
     BUTTONS
@@ -301,7 +310,7 @@ a {
   margin-bottom: 0; }
 
 .preheader {
-  color: transparent;
+  color: transparent !important;
   display: none;
   height: 0;
   max-height: 0;
@@ -310,7 +319,16 @@ a {
   overflow: hidden;
   mso-hide: all;
   visibility: hidden;
-  width: 0; }
+  width: 0;
+  font-size: 1px !important;
+  line-height: 0; }
+
+.preheader-archive {
+  text-align: right; }
+  .preheader-archive a {
+    color: #aaa;
+    font-size: 11px;
+    text-align: right; }
 
 /* -------------------------------------
     RESPONSIVE AND MOBILE FRIENDLY STYLES

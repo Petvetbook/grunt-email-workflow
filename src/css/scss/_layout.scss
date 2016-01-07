@@ -57,6 +57,13 @@ body{
       margin-bottom: $line-height;
     }
   }
+  .image {
+    line-height: 0;
+    max-width: 30%;
+    img {
+      max-width: 100%;
+    }
+  }
   .column-image {
     line-height: 0;
     max-width: 50%;
@@ -154,10 +161,11 @@ body{
     font-size: 12px;
     line-height: 16px;
   }
-  .logo {
-    width: 40%;
+  .logo,
+  .footer-logo {
     img {
-      height: 14px;
+      height: 14px !important;
+      width: auto;
     }
   }
   .social {

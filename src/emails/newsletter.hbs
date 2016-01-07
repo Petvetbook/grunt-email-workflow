@@ -3,6 +3,7 @@ layout: default.hbs
 subject: Newsletter
 ---
 <span class="preheader">This is preheader text. Some clients will show this text as a preview.</span>
+<p class="preheader-archive"><a href="*|ARCHIVE|*" target="_blank">View this email in your browser</a></p>
 
 <table class="header">
   <tr>
@@ -23,7 +24,7 @@ subject: Newsletter
     <td class="wrapper">
       <table>
         <tr>
-          <td>
+          <td mc:edit="hello">
             <h1>Hello!</h1>
             <p>There’s a lot happening on Morrr.com, so we’ve picked together this week’s best pieces that we thought might interest you. Happy reading!</p>
           </td>
@@ -34,7 +35,7 @@ subject: Newsletter
 </table>
 
 <table class="main">
-  <tr>
+  <tr mc:repeatable mc:variant="small-image">
     <td class="wrapper">
       <table>
         <tr>
@@ -49,7 +50,7 @@ subject: Newsletter
       </table>
     </td>
   </tr>
-  <tr>
+  <tr mc:repeatable mc:variant="large-image">
     <td class="wrapper">
       <table>
         <tr>
@@ -71,7 +72,7 @@ subject: Newsletter
     <td class="wrapper">
       <table>
         <tr>
-          <td>
+          <td mc:edit="goodbye">
             <p>We are happy to have you on board our Morrr newsletter. Feel free to share your favorite articles and drop us a line on Facebook! Address any queries and feedback to <a href="mailto:feedback@morrr.com">feedback@morrr.com</a></p>
           </td>
         </tr>
@@ -101,8 +102,9 @@ subject: Newsletter
   </tr>
   <tr>
     <td class="wrapper align-left">
-      <p>Don't like these emails? <a href="{{ default.unsubscribe_url }}"><unsubscribe>Unsubscribe</unsubscribe></a>.</p>
-      <p>We are startup company offering digital pet services for animal wellbeing. Our aim is to become the leading marketplace for connecting pet owners with service providers. We cooperate with vets, groomers, trainers and other professionals to help pet owners easily find the best services. Our services are free to use for both customers and companies. We also provide professional tools for advancing sales and marketing with flexibly-priced premium tools. Please contact us to learn more. </p>
+      <p><a href="{{ default.unsubscribe_url }}"><unsubscribe>*|UNSUB|*</unsubscribe></a></p>
+      <p mc:edit="about-morrr">We are startup company offering digital pet services for animal wellbeing. Our aim is to become the leading marketplace for connecting pet owners with service providers. We cooperate with vets, groomers, trainers and other professionals to help pet owners easily find the best services. Our services are free to use for both customers and companies. We also provide professional tools for advancing sales and marketing with flexibly-priced premium tools. Please contact us to learn more. </p>
+      <p>Copyright (C) *|CURRENT_YEAR|* Morrr Oy. All rights reserved.</p>
     </td>
   </tr>
 </table>

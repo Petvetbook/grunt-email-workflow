@@ -3,6 +3,7 @@ layout: default.hbs
 subject: Mailchimp Template
 ---
 <span class="preheader">This is preheader text. Some clients will show this text as a preview.</span>
+<p class="preheader-archive"><a href="*|ARCHIVE|*" target="_blank">View this email in your browser</a></p>
 
 <table class="header-mc">
   <tr>
@@ -12,13 +13,13 @@ subject: Mailchimp Template
   </tr>
   <tr>
     <td class="align-center hero">
-      <img src="../src/img/img-header.jpg" alt="morrr.com">
+      <img src="../src/img/img-header.jpg" alt="morrr.com" mc:edit="header_image">
     </td>
   </tr>
 </table>
 
 <table class="main">
-  <tr>
+  <tr mc:repeatable mc:variant="text">
     <td class="wrapper-mc hello">
       <table>
         <tr>
@@ -31,7 +32,23 @@ subject: Mailchimp Template
     </td>
   </tr>
 
-  <tr>
+  <tr mc:repeatable mc:variant="small-image">
+    <td class="wrapper-mc">
+      <table>
+        <tr>
+          <td class="image">
+            <img src="../src/img/img.png" />
+          </td>
+          <td class="box">
+            <h2>Simple responsive HTML email template</h2>
+            <p>This is a really simple email template. It's sole purpose is to get you to click the button below.</p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <tr mc:repeatable mc:variant="two-column">
     <td class="wrapper-mc column">
       <table>
         <tr>
@@ -54,7 +71,7 @@ subject: Mailchimp Template
     </td>
   </tr>
 
-  <tr>
+  <tr mc:repeatable mc:variant="full-width-image">
     <td class="wrapper-mc full">
       <table>
         <tr>
@@ -79,7 +96,7 @@ subject: Mailchimp Template
     </td>
   </tr>
 
-  <tr>
+  <tr mc:repeatable mc:variant="call-to-action">
     <td class="wrapper-mc c2a">
       <table>
         <tr>
@@ -91,7 +108,7 @@ subject: Mailchimp Template
       <table class=" btn btn-primary">
         <tr>
           <td align="center">
-            <a href="http://www.leemunroe.com">Call to action</a>
+            <a href="https://www.morrr.com">Call to action</a>
           </td>
         </tr>
       </table>
@@ -104,7 +121,7 @@ subject: Mailchimp Template
     <td class="wrapper">
       <table>
         <tr>
-          <td class="align-left logo">
+          <td class="align-left logo footer-logo">
             <a href="http://www.morrr.com">
               <img src="../src/img/footer-logo.png" alt="morrr.com"><br/>
               <span>Bulevardi 7, Helsinki 00100</span>
@@ -120,8 +137,9 @@ subject: Mailchimp Template
   </tr>
   <tr>
     <td class="wrapper align-left">
-      <p>Don't like these emails? <a href="{{ default.unsubscribe_url }}"><unsubscribe>Unsubscribe</unsubscribe></a>.</p>
-      <p>We are startup company offering digital pet services for animal wellbeing. Our aim is to become the leading marketplace for connecting pet owners with service providers. We cooperate with vets, groomers, trainers and other professionals to help pet owners easily find the best services. Our services are free to use for both customers and companies. We also provide professional tools for advancing sales and marketing with flexibly-priced premium tools. Please contact us to learn more. </p>
+      <p><a href="{{ default.unsubscribe_url }}"><unsubscribe>*|UNSUB|*</unsubscribe></a></p>
+      <p mc:edit="about-morrr">We are startup company offering digital pet services for animal wellbeing. Our aim is to become the leading marketplace for connecting pet owners with service providers. We cooperate with vets, groomers, trainers and other professionals to help pet owners easily find the best services. Our services are free to use for both customers and companies. We also provide professional tools for advancing sales and marketing with flexibly-priced premium tools. Please contact us to learn more. </p>
+      <p>Copyright (C) *|CURRENT_YEAR|* Morrr Oy. All rights reserved.</p>
     </td>
   </tr>
 </table>
