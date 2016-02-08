@@ -77,7 +77,6 @@ body{
 }
 .wrapper {
   padding: $padding;
-  border-bottom: $padding solid $grey;
 }
 .wrapper-mc {
   padding: 0 $padding $padding $padding;
@@ -165,7 +164,7 @@ body{
   .footer-logo {
     img {
       height: 14px !important;
-      width: auto;
+      width: 69px !important;
     }
   }
   .social {

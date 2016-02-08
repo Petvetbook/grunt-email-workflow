@@ -2,7 +2,7 @@
 layout: default.hbs
 subject: Mailchimp Template
 ---
-<span class="preheader">This is preheader text. Some clients will show this text as a preview.</span>
+<span class="preheader" mc:edit="preheader">This is preheader text. Some clients will show this text as a preview.</span>
 <p class="preheader-archive"><a href="*|ARCHIVE|*" target="_blank">View this email in your browser</a></p>
 
 <table class="header-mc">
@@ -13,7 +13,7 @@ subject: Mailchimp Template
   </tr>
   <tr>
     <td class="align-center hero">
-      <img src="../src/img/img-header.jpg" alt="morrr.com" mc:edit="header_image">
+      <img src="../src/img/img-header.jpg" alt="morrr.com" mc:edit="header_image" />
     </td>
   </tr>
 </table>
@@ -23,9 +23,9 @@ subject: Mailchimp Template
     <td class="wrapper-mc hello">
       <table>
         <tr>
-          <td>
+          <td mc:edit="hello">
             <h1>Hello!</h1>
-            <p>There’s a lot happening on Morrr.com, so we’ve picked together this week’s best pieces that we thought might interest you. Happy reading!</p>
+            <p>There’s a lot happening on <a href="http://morrr.com">Morrr.com</a>, so we’ve picked together this week’s best pieces that we thought might interest you. Happy reading!</p>
           </td>
         </tr>
       </table>
@@ -36,11 +36,20 @@ subject: Mailchimp Template
     <td class="wrapper-mc">
       <table>
         <tr>
-          <td class="image">
-            <img src="../src/img/img.png" />
+          <td class="divider">
+            <hr>
           </td>
-          <td class="box">
-            <h2>Simple responsive HTML email template</h2>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <td class="image">
+            <img src="../src/img/img.png" mc:edit="column_image" />
+          </td>
+          <td class="box" mc:edit="column_text">
+            <a href="http://morrr.com">
+              <h2>Simple responsive HTML email template</h2>
+            </a>
             <p>This is a really simple email template. It's sole purpose is to get you to click the button below.</p>
           </td>
         </tr>
@@ -60,10 +69,12 @@ subject: Mailchimp Template
       <table>
         <tr>
           <td class="column-image">
-            <img src="../src/img/img.png" />
+            <img src="../src/img/img.png" mc:edit="column_image" />
           </td>
-          <td class="box">
-            <h2>Simple responsive HTML email template</h2>
+          <td class="box" mc:edit="column_text">
+            <a href="http://morrr.com">
+              <h2>Simple responsive HTML email template</h2>
+            </a>
             <p>This is a really simple email template. It's sole purpose is to get you to click the button below.</p>
           </td>
         </tr>
@@ -83,12 +94,14 @@ subject: Mailchimp Template
       <table>
         <tr>
           <td class="full-image">
-            <img src="../src/img/img-header.jpg" />
+            <img src="../src/img/img-header.jpg" mc:edit="full_image" />
           </td>
         </tr>
         <tr>
-          <td>
-            <h2>Simple responsive HTML email template</h2>
+          <td mc:edit="hello">
+            <a href="http://morrr.com">
+              <h2>Simple responsive HTML email template</h2>
+            </a>
             <p>This is a really simple email template. It's sole purpose is to get you to click the button below.</p>
           </td>
         </tr>
@@ -105,9 +118,9 @@ subject: Mailchimp Template
           </td>
         </tr>
       </table>
-      <table class=" btn btn-primary">
+      <table class="btn btn-primary">
         <tr>
-          <td align="center">
+          <td align="center" mc:edit="c2a">
             <a href="https://www.morrr.com">Call to action</a>
           </td>
         </tr>
